@@ -1,0 +1,4 @@
+task :default do
+  directory "lib"
+  directory "bin"
+end
