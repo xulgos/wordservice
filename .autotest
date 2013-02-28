@@ -6,3 +6,7 @@ Autotest.add_hook :initialize do |autotest|
   end
   autotest.unit_diff.sub!(/ruby/, "jruby --ng")
 end
+
+Autotest.add_hook :initialize do |autotest|
+  autotest.testlib = 'minitest/spec'
+end
