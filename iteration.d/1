@@ -1,0 +1,5 @@
+Service reasource
+  get /word should return a random word
+  get /word/{anyword} should return that word's reasource page
+  put /word/{anyword} creates a word
+  delete /word/{anyword} deletes that word
