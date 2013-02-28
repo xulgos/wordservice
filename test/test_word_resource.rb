@@ -1,4 +1,5 @@
 require 'helper'
+require 'word_resource'
 
 describe WordResource do
   it "should not return an empty response" do
