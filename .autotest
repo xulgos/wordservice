@@ -4,7 +4,6 @@ Autotest.add_hook :initialize do |autotest|
       "#{super} --ng"
     end
   end
-  autotest.unit_diff.sub!(/ruby/, "jruby --ng")
 end
 
 Autotest.add_hook :initialize do |autotest|
