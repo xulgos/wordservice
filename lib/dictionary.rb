@@ -1,10 +1,7 @@
-class Dictionary 
+require 'mongoid'
 
-  def initialize(handle)
-    @handle = handle
-  end
-  
-  def include?(word)
-    true
-  end
+class Dictionary 
+  include Mongoid::Document
+
+  field :word, type: String
 end
