@@ -1,0 +1,19 @@
+development_gems = "ZenTest rack-test minitest"
+production_gems = "sinatra mongoid"
+
+task :update_rubygems do 
+  major, midle, minor = `gem -v`.split('.').map { |n| n.to_i }
+  sh 'gem update --system' unless mayor >= 2
+end
+
+task :development => :update_rubygems do
+  sh "gem install #{development_gems} #{production_gems}"
+end
+
+task :production => :update_rubygems do
+  sh "gem install #{production_gems}"
+end
+
+task :new => :development
+
+task :default => :new
