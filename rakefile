@@ -1,9 +1,10 @@
+require 'rake/testtask'
 development_gems = "ZenTest rack-test minitest"
 production_gems = "sinatra mongoid"
 
 task :update_rubygems do 
   major, midle, minor = `gem -v`.split('.').map { |n| n.to_i }
-  sh 'gem update --system' unless mayor >= 2
+  sh 'gem update --system' unless major >= 2
 end
 
 task :development => :update_rubygems do
@@ -16,4 +17,9 @@ end
 
 task :new => :development
 
-task :default => :new
+Rake::TestTask.new do |t|
+  %w{test lib}.each { |dir| t.libs << dir }
+  t.test_files = FileList['test/test*.rb']
+end
+
+task :default => :test
