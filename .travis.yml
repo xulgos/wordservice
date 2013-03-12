@@ -14,9 +14,5 @@ matrix:
   exclude:
     - rvm: 1.9.3
       jdk: openjdk7
-    - rvm: 1.9.3
-      jdk: oraclejdk7
     - rvm: 2.0.0
       jdk: openjdk7
-    - rvm: 2.0.0
-      jdk: oraclejdk7
