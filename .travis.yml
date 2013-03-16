@@ -1,7 +1,5 @@
 language: ruby
 rvm:
-  - "1.9.3"
-  - "2.0.0"
   - jruby-19mode
   - jruby-head
 install: rake new
@@ -10,9 +8,3 @@ services: mongodb
 jdk:
   - oraclejdk7
   - openjdk7
-matrix:
-  exclude:
-    - rvm: 1.9.3
-      jdk: openjdk7
-    - rvm: 2.0.0
-      jdk: openjdk7
