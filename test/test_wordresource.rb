@@ -1,7 +1,7 @@
 require 'helper'
 require 'minitest/unit'
 require 'wordsmugler'
-require 'word_resource'
+require 'wordresource'
 require 'json'
 
 describe WordResource do
