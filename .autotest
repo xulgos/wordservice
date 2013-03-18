@@ -1,7 +1,7 @@
 Autotest.add_hook :initialize do |autotest|
   class << autotest
     def ruby_cmd
-      "#{super} --ng --server"
+      "#{super} --ng"
     end
   end
 end

@@ -3,8 +3,15 @@ require 'word'
 class WordSmugler
 
   def random
-    random_key = Random.rand
-    word = Word.where(:random.gte => random_key).first
+    word = word_within_range(Random.rand, 0.05) until word
     word.value
+  end
+
+  private
+  def word_within_range(number, offset)
+    Word.where(:random.gte => number,
+               :random.lte => number + offset).min do |left, right|
+      left.random <=> right.random
+    end
   end
 end
