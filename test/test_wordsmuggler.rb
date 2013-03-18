@@ -1,10 +1,10 @@
 require 'helper'
-require 'wordsmugler'
+require 'wordsmuggler'
 
-describe WordSmugler do
+describe WordSmuggler do
 
   before do
-    @smugler = WordSmugler.new
+    @smuggler = WordSmuggler.new
     TestHelpers::fill_word_collection
   end
 
@@ -16,7 +16,7 @@ describe WordSmugler do
 
     it "with no parameters returns a random word" do
       TestHelpers::has_seventy_percent_randomness(
-        lambda { |results| results << @smugler.random },
+        lambda { |results| results << @smuggler.random },
         lambda { |word| word }
       )
     end

@@ -1,5 +1,5 @@
 require 'helper'
-require 'wordsmugler'
+require 'wordsmuggler'
 require 'wordresource'
 require 'json'
 
@@ -8,7 +8,7 @@ describe WordResource do
   describe "When accessed with a get to /word" do
 
     before do
-      @smugler = WordSmugler.new
+      @smuggler = WordSmuggler.new
       TestHelpers::fill_word_collection
     end
 
@@ -17,7 +17,7 @@ describe WordResource do
     end
 
     def app
-      WordResource.new(@smugler)
+      WordResource.new(@smuggler)
     end
 
     def get_and_parse_response

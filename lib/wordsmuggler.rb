@@ -1,6 +1,6 @@
 require 'word'
 
-class WordSmugler
+class WordSmuggler
 
   def random
     word = word_within_range(Random.rand, 0.001) until word
