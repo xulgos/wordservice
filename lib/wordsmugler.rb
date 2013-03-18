@@ -3,7 +3,7 @@ require 'word'
 class WordSmugler
 
   def random
-    word = word_within_range(Random.rand, 0.05) until word
+    word = word_within_range(Random.rand, 0.001) until word
     word.value
   end
 
