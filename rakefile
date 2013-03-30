@@ -1,6 +1,6 @@
 require 'rake/testtask'
 development_gems = "ZenTest rack-test minitest"
-production_gems = "sinatra mongoid"
+production_gems = "sinatra mongoid sinatra-contrib"
 
 task :update_rubygems do 
   major, midle, minor = `gem -v`.split('.').map { |n| n.to_i }

@@ -1,10 +1,7 @@
 language: ruby
 rvm:
-  - jruby-19mode
-  - jruby-head
+  - 2.0.0
+  - 1.9.3
 install: rake new
 script: rake
 services: mongodb
-jdk:
-  - oraclejdk7
-  - openjdk7

@@ -1,11 +1,3 @@
 Autotest.add_hook :initialize do |autotest|
-  class << autotest
-    def ruby_cmd
-      "#{super} --ng"
-    end
-  end
-end
-
-Autotest.add_hook :initialize do |autotest|
   autotest.testlib = 'minitest/autorun'
 end
